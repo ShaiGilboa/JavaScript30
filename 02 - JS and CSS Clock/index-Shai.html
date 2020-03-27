@@ -112,9 +112,6 @@
       const secondsDeg = (90 + (time.getSeconds() / 60) * 360) % 360;
       const minutesDeg = (90 + (time.getMinutes() / 60) * 360) % 360;
       const hoursDeg = (90 + ((time.getHours() % 12) / 12) * 360) % 360;
-      console.log('sec',secondsDeg)
-      console.log('min',minutesDeg)
-      console.log('hour',hoursDeg)
       seconds.style.transform = `rotate(${secondsDeg}deg)`;
       minutes.style.transform = `rotate(${minutesDeg}deg)`;
       hours.style.transform = `rotate(${hoursDeg}deg)`;
@@ -123,10 +120,6 @@
     const minutes = document.querySelector('.min-hand');
     const seconds = document.querySelector('.second-hand');
     setInterval(()=>setDate(), 1000);
-    const time = new Date();
-    
-    const currentTime = {hours: (time.getHours()%12)/360, minutes: time.getMinutes()/360, seconds: time.getSeconds()/360}
-    // hours.style.transform = `rotate()
   </script>
 </body>
 </html>
